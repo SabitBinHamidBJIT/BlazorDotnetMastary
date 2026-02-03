@@ -1,0 +1,42 @@
+﻿
+
+
+<div class="bg-light border m-1 col-5" @onclick="(args)=>OnselectProd(args,(string)Products.Name)">
+    <h4 class="text-primary">Product - @Products.Id</h4>
+    <input type="checkbox" @onchange="onChangeUpdate" />Add to favourite <br />
+    Name - @Products.Name<br />
+    Show Property - <input type="checkbox" @bind-value="@Products.IsActive" checked="@(Products.IsActive ? "checked" : null)" />
+    @if (Products.IsActive)
+    {
+        @foreach (var prop in Products.Properties)
+        {
+            <p>@prop.Key - @prop.Value</p>
+        }
+    }
+    <br />
+    <BlazorWebServerApp.Components.Pages.LearnBlazorComponent._EditDeleteComponent isActive="@Products.IsActive"></BlazorWebServerApp.Components.Pages.LearnBlazorComponent._EditDeleteComponent>
+
+</div>
+@code {
+    [Parameter]
+    public ServerAppModel.Model.DemoProduct Products { get; set; }
+
+    [Parameter]
+    public EventCallback<bool> OnFavouriteUpdate { get; set; }
+
+
+    [Parameter]
+    public EventCallback<string> OnClickMouseInItem { get; set; }
+
+
+    public async Task onChangeUpdate(ChangeEventArgs e)
+    {
+        await OnFavouriteUpdate.InvokeAsync((bool)e.Value);
+    }
+
+    public async Task OnselectProd(MouseEventArgs e,string name)
+    {
+        await OnClickMouseInItem.InvokeAsync(name);
+    }
+
+}

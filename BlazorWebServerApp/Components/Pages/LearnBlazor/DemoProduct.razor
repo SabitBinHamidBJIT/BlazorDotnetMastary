@@ -1,0 +1,87 @@
+﻿@page "/learnblazor/demoproduct"
+@rendermode InteractiveServer
+<h3 class="text-primary">Demo Product</h3>
+
+<p>Favourite Count - @selectdCountUpdate</p>
+<p>Last Choose Item - @LastChooseProductName</p>
+
+<div class="border p-2 mt-2" style="background-color:azure">
+    <div class="row">
+        @foreach (var prod in Products)
+        {
+            @* <div class="bg-light border m-1 col-5">
+                <h4 class="text-primary">Product - @prod.Id</h4>
+                Name - @prod.Name<br />
+                Show Property - <input type="checkbox" @bind-value="@prod.IsActive" checked="@(prod.IsActive?"checked":null)" />
+                @if (prod.IsActive)
+                {
+                    @foreach (var prop in prod.Properties)
+                    {
+                        <p>@prop.Key - @prop.Value</p>
+                    }
+                }
+                <br />
+                <BlazorWebServerApp.Components.Pages.LearnBlazorComponent._EditDeleteComponent isActive="@prod.IsActive"></BlazorWebServerApp.Components.Pages.LearnBlazorComponent._EditDeleteComponent>
+        
+            </div> *@
+
+            <BlazorWebServerApp.Components.Pages.LearnBlazorComponent._IndividualProduct Products="@prod" 
+              OnFavouriteUpdate="UpdateFavouriteCount" OnClickMouseInItem="LastChooseProduct">
+            </BlazorWebServerApp.Components.Pages.LearnBlazorComponent._IndividualProduct>
+        }
+    </div>
+</div>
+
+
+@code {
+    List<ServerAppModel.Model.DemoProduct> Products = new();
+
+    private int selectdCountUpdate { get; set; } = 0;
+    private string LastChooseProductName;
+
+    protected void UpdateFavouriteCount(bool isselected)
+    {
+        if (isselected)
+        {
+            selectdCountUpdate++;
+        }
+        else selectdCountUpdate--;
+    }
+
+    protected void LastChooseProduct(string s)
+    {
+        LastChooseProductName = s;
+    }
+
+    protected override void OnInitialized()
+    {
+
+        Products.Add(new()
+        {
+            Id = 1,
+            Name = "Rose Candle",
+            IsActive = true,
+            Price = 10.99,
+            Properties = new List<ServerAppModel.Model.DemoProductProperty>()
+            {
+              new ServerAppModel.Model.DemoProductProperty{Id=1,Key="Color",Value="Black"},
+              new ServerAppModel.Model.DemoProductProperty{Id=2,Key="Flavor",Value="Rose Jasmine"},
+              new ServerAppModel.Model.DemoProductProperty{Id=3,Key="Size",Value="20oz"},
+            }
+        });
+
+        Products.Add(new()
+        {
+            Id = 2,
+            Name = "Midnight Blaze",
+            IsActive = false,
+            Price = 15.99,
+            Properties = new List<ServerAppModel.Model.DemoProductProperty>()
+            {
+              new ServerAppModel.Model.DemoProductProperty{Id=1,Key="Color",Value="White"},
+              new ServerAppModel.Model.DemoProductProperty{Id=2,Key="Flavor",Value="Lily"},
+              new ServerAppModel.Model.DemoProductProperty{Id=3,Key="Size",Value="18oz"},
+            }
+        });
+    }
+}
