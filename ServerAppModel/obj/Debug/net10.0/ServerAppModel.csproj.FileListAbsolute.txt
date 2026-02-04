@@ -9,3 +9,15 @@ D:\ServerApp\BlazorServerApp\ServerAppModel\obj\Debug\net10.0\ServerAppModel.dll
 D:\ServerApp\BlazorServerApp\ServerAppModel\obj\Debug\net10.0\refint\ServerAppModel.dll
 D:\ServerApp\BlazorServerApp\ServerAppModel\obj\Debug\net10.0\ServerAppModel.pdb
 D:\ServerApp\BlazorServerApp\ServerAppModel\obj\Debug\net10.0\ref\ServerAppModel.dll
+D:\BlazorDotnetMastary\ServerAppModel\bin\Debug\net10.0\ServerAppModel.deps.json
+D:\BlazorDotnetMastary\ServerAppModel\bin\Debug\net10.0\ServerAppModel.dll
+D:\BlazorDotnetMastary\ServerAppModel\bin\Debug\net10.0\ServerAppModel.pdb
+D:\BlazorDotnetMastary\ServerAppModel\obj\Debug\net10.0\ServerAppModel.GeneratedMSBuildEditorConfig.editorconfig
+D:\BlazorDotnetMastary\ServerAppModel\obj\Debug\net10.0\ServerAppModel.AssemblyInfoInputs.cache
+D:\BlazorDotnetMastary\ServerAppModel\obj\Debug\net10.0\ServerAppModel.AssemblyInfo.cs
+D:\BlazorDotnetMastary\ServerAppModel\obj\Debug\net10.0\ServerAppModel.csproj.CoreCompileInputs.cache
+D:\BlazorDotnetMastary\ServerAppModel\obj\Debug\net10.0\ServerAppModel.sourcelink.json
+D:\BlazorDotnetMastary\ServerAppModel\obj\Debug\net10.0\ServerAppModel.dll
+D:\BlazorDotnetMastary\ServerAppModel\obj\Debug\net10.0\refint\ServerAppModel.dll
+D:\BlazorDotnetMastary\ServerAppModel\obj\Debug\net10.0\ServerAppModel.pdb
+D:\BlazorDotnetMastary\ServerAppModel\obj\Debug\net10.0\ref\ServerAppModel.dll

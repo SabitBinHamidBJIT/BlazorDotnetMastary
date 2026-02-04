@@ -5,6 +5,9 @@
     <h4 class="text-primary">Product - @Products.Id</h4>
     <input type="checkbox" @onchange="onChangeUpdate" />Add to favourite <br />
     Name - @Products.Name<br />
+
+    <p>RF From Parent - @FirstFragment, @SecondFragment</p><br />
+
     Show Property - <input type="checkbox" @bind-value="@Products.IsActive" checked="@(Products.IsActive ? "checked" : null)" />
     @if (Products.IsActive)
     {
@@ -18,6 +21,11 @@
 
 </div>
 @code {
+    [Parameter]
+    public RenderFragment FirstFragment { get; set; }
+    [Parameter]
+    public RenderFragment SecondFragment { get; set; }
+
     [Parameter]
     public ServerAppModel.Model.DemoProduct Products { get; set; }
 

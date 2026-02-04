@@ -1,0 +1,43 @@
+﻿
+<div>
+    <div class="alert alert-info">@Title</div>
+    <div class="alert alert-secondary">
+        @if (LatestChildContent != null)
+        {
+            <span>@LatestChildContent</span>
+        }
+        else
+        {
+            @if (ChildContent != null)
+            {
+                <span>@ChildContent</span>
+            }
+            else
+            {
+                <span>There is no message to show RenderFragmemnt </span>
+            }
+        }
+
+    </div>
+    <div class="alert alert-secondary"> <_GrandParentComponent MessageFromChild=@mesg></_GrandParentComponent></div>
+    <button class="btn btn-danger" @onclick="OnButtonClickFunc">Button To Be Click</button>
+</div>
+@code {
+    
+
+    private string mesg = "Message from child";
+    [Parameter]
+    public string Title { get; set; }
+    [Parameter]
+    public RenderFragment ChildContent { get; set; }
+    [Parameter]
+    public RenderFragment LatestChildContent { get; set; }
+
+    [Parameter]
+    public EventCallback OnButtonClick { get; set; }
+
+    public async Task OnButtonClickFunc()
+    {
+        await OnButtonClick.InvokeAsync();
+    }
+}

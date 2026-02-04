@@ -1,0 +1,35 @@
+﻿@page "/learnblazor/parentchild"
+@rendermode InteractiveServer
+@using BlazorWebServerApp.Components.Pages.LearnBlazorComponent
+<h3>Parent Child Relation</h3>
+<CascadingValue Value="@MessageFromParentByChild" Name="MessageFromParentByChild">
+    <CascadingValue Value="@LuckyNumber" Name="LuckyNumber">
+        <_ChildComponent OnButtonClick="sendMessage" Title="This message is from parent to child component">
+            <ChildContent>
+                This renderfragment is from parent to child
+            </ChildContent>
+            <LatestChildContent>This renderfragment is Latest Child Content from parent to child</LatestChildContent>
+        </_ChildComponent>
+    </CascadingValue>
+</CascadingValue>
+<_AnotherChildComponent InputAttribute="InputAttributeFromParent"></_AnotherChildComponent>
+<p><b>@message</b></p>
+
+
+@code {
+
+    public Dictionary<string, object> InputAttributeFromParent { get; set; } = new()
+    {
+        {"placeholder","Parent Placeholder"},
+        {"required","required"},
+        {"maxlength",10},
+    };
+    private string MessageFromParentByChild = "This message is from parent throw child for grand child";
+    private string LuckyNumber = "11";
+    public string message = "";
+
+    public void sendMessage()
+    {
+        message = "This message is form parent to child.";
+    }
+}

@@ -8,23 +8,23 @@
     "net10.0": []
   },
   "packageFolders": {
-    "C:\\Users\\BJIT\\.nuget\\packages\\": {},
+    "C:\\Users\\Shurid\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\ServerApp\\BlazorServerApp\\ServerAppModel\\ServerAppModel.csproj",
+      "projectUniqueName": "D:\\BlazorDotnetMastary\\ServerAppModel\\ServerAppModel.csproj",
       "projectName": "ServerAppModel",
-      "projectPath": "D:\\ServerApp\\BlazorServerApp\\ServerAppModel\\ServerAppModel.csproj",
-      "packagesPath": "C:\\Users\\BJIT\\.nuget\\packages\\",
-      "outputPath": "D:\\ServerApp\\BlazorServerApp\\ServerAppModel\\obj\\",
+      "projectPath": "D:\\BlazorDotnetMastary\\ServerAppModel\\ServerAppModel.csproj",
+      "packagesPath": "C:\\Users\\Shurid\\.nuget\\packages\\",
+      "outputPath": "D:\\BlazorDotnetMastary\\ServerAppModel\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\BJIT\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Shurid\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -72,7 +72,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.102/PortableRuntimeIdentifierGraph.json",
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.101/PortableRuntimeIdentifierGraph.json",
         "packagesToPrune": {
           "Microsoft.CSharp": "(,4.7.32767]",
           "Microsoft.VisualBasic": "(,10.4.32767]",
