@@ -1,0 +1,39 @@
+﻿@page "/learnblazor/routing"
+@page "/learnblazor/routing/{parameter1}"
+@page "/learnblazor/routing/{parameter1}/{parameter2}"
+@page "/learnblazor"
+@page "/learnRouting"
+@rendermode InteractiveServer
+
+@inject NavigationManager _NavigationManager
+
+<h3>Learn Routing</h3>
+<div>
+    <p>Parameter1 - @Parameter1</p>
+    <p>Parameter2 - @Parameter2</p>
+    <a href="learnRouting?Id=1&name=sabit" class="btn btn-success">Navigate to query parameter</a>
+    <button @onclick="getQuaryParma" class="btn btn-primary">Loade query Parameter</button>
+    <p>query parameter are : </p>
+    <p>Param1 - @param1</p>
+    <p>Param2 - @param2</p>
+</div>
+
+@code {
+    [Parameter]
+    public string Parameter1 { get; set; }
+    [Parameter]
+    public string Parameter2 { get; set; }
+
+    public string param1 { get; set; }
+    public string param2 { get; set; }
+
+    public void getQuaryParma()
+    {
+        var abosulteUri = new Uri(_NavigationManager.Uri);
+        var quryParameter = System.Web.HttpUtility.ParseQueryString(abosulteUri.Query);
+        param1 = quryParameter["id"];
+        param2 = quryParameter["name"];
+    }
+
+ 
+}

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "JEWc23ZqC9U=",
+  "dgSpecHash": "qrPeVgOyWJk=",
   "success": true,
-  "projectFilePath": "D:\\BlazorDotnetMastary\\ServerAppModel\\ServerAppModel.csproj",
+  "projectFilePath": "D:\\ServerApp\\BlazorServerApp\\ServerAppModel\\ServerAppModel.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

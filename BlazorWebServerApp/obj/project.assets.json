@@ -2,7 +2,7 @@
   "version": 3,
   "targets": {
     "net10.0": {
-      "Microsoft.AspNetCore.App.Internal.Assets/10.0.1": {
+      "Microsoft.AspNetCore.App.Internal.Assets/10.0.2": {
         "type": "package",
         "build": {
           "build/Microsoft.AspNetCore.App.Internal.Assets.props": {},
@@ -25,10 +25,10 @@
     }
   },
   "libraries": {
-    "Microsoft.AspNetCore.App.Internal.Assets/10.0.1": {
-      "sha512": "rafnWkNfJPA0nCZ5u9bFLiIhCv+aGDWBPJMejuROFMHEpsNhTdv8Cvhv+2jIH+b5485FhndbiwOQJUBMeBa6BQ==",
+    "Microsoft.AspNetCore.App.Internal.Assets/10.0.2": {
+      "sha512": "fMAqrUm+aspxRAsCJ6Hlgs96XSHwNIr9HBNt7wyBAzQkPlfE7w+0C4NzDoJnso5YZyDI0VcRtEXxG9odt3KiZA==",
       "type": "package",
-      "path": "microsoft.aspnetcore.app.internal.assets/10.0.1",
+      "path": "microsoft.aspnetcore.app.internal.assets/10.0.2",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -44,7 +44,7 @@
         "build/Microsoft.AspNetCore.App.Internal.Assets.targets",
         "buildMultiTargeting/Microsoft.AspNetCore.App.Internal.Assets.targets",
         "buildTransitive/Microsoft.AspNetCore.App.Internal.Assets.targets",
-        "microsoft.aspnetcore.app.internal.assets.10.0.1.nupkg.sha512",
+        "microsoft.aspnetcore.app.internal.assets.10.0.2.nupkg.sha512",
         "microsoft.aspnetcore.app.internal.assets.nuspec"
       ]
     },
@@ -56,28 +56,28 @@
   },
   "projectFileDependencyGroups": {
     "net10.0": [
-      "Microsoft.AspNetCore.App.Internal.Assets >= 10.0.1",
+      "Microsoft.AspNetCore.App.Internal.Assets >= 10.0.2",
       "ServerAppModel >= 1.0.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Shurid\\.nuget\\packages\\": {},
+    "C:\\Users\\BJIT\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\BlazorDotnetMastary\\BlazorWebServerApp\\BlazorWebServerApp.csproj",
+      "projectUniqueName": "D:\\ServerApp\\BlazorServerApp\\BlazorWebServerApp\\BlazorWebServerApp.csproj",
       "projectName": "BlazorWebServerApp",
-      "projectPath": "D:\\BlazorDotnetMastary\\BlazorWebServerApp\\BlazorWebServerApp.csproj",
-      "packagesPath": "C:\\Users\\Shurid\\.nuget\\packages\\",
-      "outputPath": "D:\\BlazorDotnetMastary\\BlazorWebServerApp\\obj\\",
+      "projectPath": "D:\\ServerApp\\BlazorServerApp\\BlazorWebServerApp\\BlazorWebServerApp.csproj",
+      "packagesPath": "C:\\Users\\BJIT\\.nuget\\packages\\",
+      "outputPath": "D:\\ServerApp\\BlazorServerApp\\BlazorWebServerApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Shurid\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\BJIT\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -92,8 +92,8 @@
         "net10.0": {
           "targetAlias": "net10.0",
           "projectReferences": {
-            "D:\\BlazorDotnetMastary\\ServerAppModel\\ServerAppModel.csproj": {
-              "projectPath": "D:\\BlazorDotnetMastary\\ServerAppModel\\ServerAppModel.csproj"
+            "D:\\ServerApp\\BlazorServerApp\\ServerAppModel\\ServerAppModel.csproj": {
+              "projectPath": "D:\\ServerApp\\BlazorServerApp\\ServerAppModel\\ServerAppModel.csproj"
             }
           }
         }
@@ -117,7 +117,7 @@
           "Microsoft.AspNetCore.App.Internal.Assets": {
             "suppressParent": "All",
             "target": "Package",
-            "version": "[10.0.1, )",
+            "version": "[10.0.2, )",
             "autoReferenced": true
           }
         },
@@ -140,7 +140,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.101/PortableRuntimeIdentifierGraph.json",
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.102/PortableRuntimeIdentifierGraph.json",
         "packagesToPrune": {
           "Microsoft.AspNetCore": "(,10.0.32767]",
           "Microsoft.AspNetCore.Antiforgery": "(,10.0.32767]",

@@ -1,6 +1,6 @@
 ﻿@page "/learnblazor/parentchild"
 @rendermode InteractiveServer
-@using BlazorWebServerApp.Components.Pages.LearnBlazorComponent
+@using BlazorWebServerApp.Components.Pages.LearnBlazor.LearnBlazorComponent
 <h3>Parent Child Relation</h3>
 <CascadingValue Value="@MessageFromParentByChild" Name="MessageFromParentByChild">
     <CascadingValue Value="@LuckyNumber" Name="LuckyNumber">
@@ -23,6 +23,7 @@
         {"placeholder","Parent Placeholder"},
         {"required","required"},
         {"maxlength",10},
+        {"type","number"},
     };
     private string MessageFromParentByChild = "This message is from parent throw child for grand child";
     private string LuckyNumber = "11";

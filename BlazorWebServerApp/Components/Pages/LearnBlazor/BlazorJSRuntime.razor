@@ -1,0 +1,45 @@
+﻿@page "/learnblazor/blazorJs"
+@rendermode InteractiveServer
+@inject IJSRuntime _JSRuntime
+
+
+
+<h3>Blazor JS Runtime</h3>
+<div class="row">
+    <button class="btn btn-secondary" @onclick="ConfirmForDelete">Confirm Delete</button><br />
+</div>
+<div class="row">
+    <button class="btn btn-success" @onclick="TrySuccess">Try Success</button><br />
+    <button class="btn btn-danger" @onclick="TryError">Try Error</button><br />
+</div>
+
+<div class="row">
+    @if (confirmationData)
+    {
+        <p>Deletation has been confirmed</p>
+    }
+    else
+    {
+        <p>Deletation denied</p>
+    }
+</div>
+
+
+@code {
+
+    private string confirmMessage = "Do you wanna delete this data?";
+    private bool confirmationData;
+    public async Task ConfirmForDelete()
+    {
+        confirmationData=await _JSRuntime.InvokeAsync<bool>("confirm", confirmMessage);
+    }
+
+    public async Task TryError()
+    {
+        await _JSRuntime.InvokeVoidAsync("ShowToastrNotification","error","Error");
+    }
+    public async Task TrySuccess()
+    {
+        await _JSRuntime.InvokeVoidAsync("ShowToastrNotification", "success","Success");
+    }
+}
