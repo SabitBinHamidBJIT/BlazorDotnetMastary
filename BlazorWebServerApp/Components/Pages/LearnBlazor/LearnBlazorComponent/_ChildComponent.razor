@@ -1,4 +1,5 @@
 ﻿
+@inject IJSRuntime _ijsruntime
 <div>
     <div class="alert alert-info">@Title</div>
     <div class="alert alert-secondary">
@@ -22,6 +23,7 @@
     <div class="alert alert-secondary"> <_GrandParentComponent MessageFromChild=@mesg></_GrandParentComponent></div>
     <button class="btn btn-danger" @onclick="OnButtonClickFunc">Button To Be Click</button>
 </div>
+
 @code {
     
 
@@ -39,5 +41,11 @@
     public async Task OnButtonClickFunc()
     {
         await OnButtonClick.InvokeAsync();
+    }
+
+
+    public async Task SweetAlertSuccess()
+    {
+        await _ijsruntime.JSRuntimeShowSwelSuccess("Operation successfull");
     }
 }

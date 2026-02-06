@@ -4,7 +4,7 @@
 <h3>Parent Child Relation</h3>
 <CascadingValue Value="@MessageFromParentByChild" Name="MessageFromParentByChild">
     <CascadingValue Value="@LuckyNumber" Name="LuckyNumber">
-        <_ChildComponent OnButtonClick="sendMessage" Title="This message is from parent to child component">
+        <_ChildComponent @ref="_ChildComponents" OnButtonClick="sendMessage" Title="This message is from parent to child component">
             <ChildContent>
                 This renderfragment is from parent to child
             </ChildContent>
@@ -14,10 +14,13 @@
 </CascadingValue>
 <_AnotherChildComponent InputAttribute="InputAttributeFromParent"></_AnotherChildComponent>
 <p><b>@message</b></p>
-
+<br />
+<div class="row">
+    <button class="btn btn-success" @onclick="()=>_ChildComponents.SweetAlertSuccess()">Sweet alert</button>
+</div>
 
 @code {
-
+    public _ChildComponent _ChildComponents;
     public Dictionary<string, object> InputAttributeFromParent { get; set; } = new()
     {
         {"placeholder","Parent Placeholder"},

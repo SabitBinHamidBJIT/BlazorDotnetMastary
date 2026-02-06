@@ -1,0 +1,53 @@
+﻿@page "/learnblazor/jsruntime"
+@rendermode InteractiveServer
+@inject IJSRuntime _ijsruntime
+<h3>Blazor JS</h3>
+<div>
+    <button class="btn btn-info" @onclick="ConfirmToDelete">Detete Record</button><br />
+    <div class="row">
+        @if (isConfirm)
+        {
+            <p>Record deleted </p>
+        }
+        else
+        {
+            <p>Record not deleted </p>
+        }
+    </div>
+
+    <button class="btn btn-success" @onclick="ToastrSuccess">Try Success Toastr</button>&nbsp;
+    <button class="btn btn-danger" @onclick="ToastrError">Try Error Toastr</button><br /><br />
+
+
+    <button class="btn btn-success" @onclick="SweetAlertSuccess">Try Success Toastr</button>&nbsp;
+    <button class="btn btn-danger" @onclick="SweetAlertError">Try Error Toastr</button><br />
+
+</div>
+
+@code {
+
+    private string message = "Want to delete this record";
+    private bool isConfirm;
+
+    public async Task ConfirmToDelete()
+    {
+        isConfirm = await _ijsruntime.InvokeAsync<bool>("confirm", message);
+    }
+    public async Task ToastrSuccess()
+    {
+        await _ijsruntime.JSRuntimeToastrSuccess("Operation successfull");
+    }
+    public async Task ToastrError()
+    {
+        await _ijsruntime.JSRuntimeToastrError("Operation failed");
+    }
+    public async Task SweetAlertSuccess()
+    {
+        await _ijsruntime.JSRuntimeShowSwelSuccess("Operation successfull");
+    }
+    public async Task SweetAlertError()
+    {
+        await _ijsruntime.JSRuntimeShowSwelError("Operation failed");
+    }
+
+}

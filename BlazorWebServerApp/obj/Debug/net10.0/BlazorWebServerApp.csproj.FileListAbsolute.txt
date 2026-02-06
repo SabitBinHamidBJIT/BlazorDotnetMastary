@@ -180,4 +180,4 @@ D:\ServerApp\BlazorServerApp\BlazorWebServerApp\obj\Debug\net10.0\refint\BlazorW
 D:\ServerApp\BlazorServerApp\BlazorWebServerApp\obj\Debug\net10.0\BlazorWebServerApp.pdb
 D:\ServerApp\BlazorServerApp\BlazorWebServerApp\obj\Debug\net10.0\BlazorWebServerApp.genruntimeconfig.cache
 D:\ServerApp\BlazorServerApp\BlazorWebServerApp\obj\Debug\net10.0\ref\BlazorWebServerApp.dll
-D:\ServerApp\BlazorServerApp\BlazorWebServerApp\obj\Debug\net10.0\compressed\z5x1oiaiaw-{0}-frq7h7iilk-frq7h7iilk.gz
+D:\ServerApp\BlazorServerApp\BlazorWebServerApp\obj\Debug\net10.0\compressed\z5x1oiaiaw-{0}-vbnddz4r3e-vbnddz4r3e.gz

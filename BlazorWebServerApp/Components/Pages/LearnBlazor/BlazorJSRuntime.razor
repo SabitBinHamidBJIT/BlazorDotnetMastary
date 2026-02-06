@@ -36,10 +36,10 @@
 
     public async Task TryError()
     {
-        await _JSRuntime.InvokeVoidAsync("ShowToastrNotification","error","Error");
+        await _JSRuntime.JSRuntimeToastrError("Operation failed");
     }
     public async Task TrySuccess()
     {
-        await _JSRuntime.InvokeVoidAsync("ShowToastrNotification", "success","Success");
+        await _JSRuntime.JSRuntimeToastrSuccess("Operation successfull");
     }
 }
